@@ -27,6 +27,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: ${{ github.workspace }}/pct.dockerfile
+          file: ${{ github.workspace }}/img.dockerfile
           push: true
           tags: junlong1/puncture:latest
