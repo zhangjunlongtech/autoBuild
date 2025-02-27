@@ -4,6 +4,7 @@ FROM openeuler/openeuler:24.03-lts
 
 # 更新包列表并安装一些基本的软件包
 RUN yum update -y && \
+    sleep 10 && \
     yum install -y \
         unzip \
         curl \
