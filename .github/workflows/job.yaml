@@ -30,3 +30,6 @@ jobs:
           file: ${{ github.workspace }}/img.dockerfile
           push: true
           tags: junlong1/puncture:latest
+      - 
+        name: 🔎 Check IP
+        run: curl https://api.ipify.org
