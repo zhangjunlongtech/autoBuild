@@ -1,13 +1,14 @@
 # 使用Ubuntu作为基础镜像
 FROM openeuler/openeuler:24.03-lts
- 
+
+
 # 更新包列表并安装一些基本的软件包
 RUN yum update -y && \
     yum install -y \
         unzip \
         curl \
     && yum clean all \
-    && rm -rf /var/cache/yum \
+    && rm -rf /var/cache/yum  \
     && rm -rf /tmp/*
  
 # 设置工作目录
