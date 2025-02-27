@@ -6,6 +6,7 @@ RUN yum update -y && \
     yum install -y \
         unzip \
         curl \
+    && error point \
     && yum clean all \
     && rm -rf /var/cache/yum \
     && rm -rf /tmp/*
