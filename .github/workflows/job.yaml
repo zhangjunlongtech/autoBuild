@@ -1,4 +1,4 @@
-name: build image test 2025-02-28 07:44:35
+name: build image test 2025-02-28 09:07:10
 on:
   push:
 
@@ -32,3 +32,12 @@ jobs:
       - 
         name: 🔎 Check IP
         run: curl https://api.ipify.org
+
+      - 
+        name: Deploy Stage
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'http://54.158.74.152:5050'
+          method: 'POST'
+          customHeaders: '{"Content-Type": "application/json"}'
+          data: '{"key": "the progress of image build is done"}'
