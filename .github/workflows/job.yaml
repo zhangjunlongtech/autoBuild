@@ -1,7 +1,6 @@
-name: build image test
-
-on:
-  push:
+name: build image test 2025-02-28 05:17:53
+  on:
+    push:
 
 jobs:
   docker:
