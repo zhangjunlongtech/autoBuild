@@ -1,6 +1,7 @@
 name: my test
 on:
-	push:
+  push:
+
 jobs:
   buildpush_ascendai/cann:openeuler-python3.10-cann8.0.0:
     runs-on: ubuntu-latest
