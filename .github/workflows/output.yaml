@@ -1,9 +1,9 @@
 name: my test
 on:
-  push:
+	push:
 
 jobs:
-  buildpush_ascendai/cann:openeuler-python3.10-cann8.0.0:
+  buildpush_cann800:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -23,8 +23,8 @@ jobs:
         context: .
         file: ${{ github.workspace }}/img.dockerfile
         push: true
-        tags: ascendai/cann:openeuler-python3.10-cann8.0.0
-  buildpush_ascendai/cann:openeuler-python3.10-cann8.0.0.beta1:
+        tags: cann800
+  buildpush_cann800beta1:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -44,4 +44,4 @@ jobs:
         context: .
         file: ${{ github.workspace }}/img.dockerfile
         push: true
-        tags: ascendai/cann:openeuler-python3.10-cann8.0.0.beta1
+        tags: cann800beta1
