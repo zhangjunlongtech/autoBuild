@@ -1,9 +1,9 @@
-name: my test1
+name: my task1
 on:
   push:
 
 jobs:
-  buildpush_cann800:
+  buildpush_ascendaicannopeneuler-python310-cann800:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -21,10 +21,10 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         context: .
-        file: ${{ github.workspace }}/img.dockerfile
+        file: ${{ github.workspace }}/img1.dockerfile
         push: true
-        tags: cann800
-  buildpush_cann800beta1:
+        tags: ascendai/cann:openeuler-python3.10-cann8.0.0
+  buildpush_ascendaicannopeneuler-python310-cann800beta1:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -42,6 +42,6 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         context: .
-        file: ${{ github.workspace }}/img.dockerfile
+        file: ${{ github.workspace }}/img2.dockerfile
         push: true
-        tags: cann800beta1
+        tags: ascendai/cann:openeuler-python3.10-cann8.0.0.beta1
